@@ -1,7 +1,8 @@
 :root {
-    --bg-color: #f3f1f4;
+    --bg-color: #e3c5a0;
     --text-color: #643048;
     --accent-color: #ed4746;
+    --gray-color: #e5dfd8;
 }
 
 * {
@@ -19,6 +20,10 @@ body{
     background-color: var(--bg-color);
 }
 
+p{
+    margin:0;
+}
+
 button {
     background-color: var(--text-color);
     color: var(--accent-color);
@@ -29,6 +34,7 @@ button {
     transition: transform 0.2s;
     font-size:20px;
     padding: 0.3em;
+    box-shadow: 0px 0px 5px 5px rgba(147,99,79,0.4);
 }
 
 button:hover{
@@ -37,16 +43,124 @@ button:hover{
 #container {
     display:flex;
     flex-wrap: wrap;
+    background-color: var(--gray-color);
     flex: 1 1 auto;
-    width:9em;
-    height:9em;
-    border-color:var(--text-color);
+    border: 1vw solid var(--text-color);
+    box-sizing:content-box;
+    box-shadow: 0px 0px 10px 10px rgba(147,99,79,0.4);
 
 }
 
 #container > div {
-    border:0.1rem solid var(--text-color);
-    width:3em;
-    height:3em;
+    border:0.01rem dotted var(--text-color);
+    background-color: var(--gray-color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+}
+
+#optionsColorPallete{
+ 
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;;
+
+}
+#optionsColorPallete > div{
+    border: 0.1rem solid  var(--text-color);
+
+}
+.sliderContainer {
+    width:50%;
+    display:flex;
+    justify-content: center;
+}
+
+input {
+    width:50%;
+    display:flex;
+    align-self:center;
+    justify-self: center;
+    -webkit-appearance: none;
+    height:0.5rem;
+    border:solid 3px var(--text-color);
+    border-radius:15px;
+    outline:none;
+    background-color: var(--gray-color);
+}
+input::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    appearance:none;
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    cursor:pointer;
+    background-color:var(--text-color);
+}
+
+input::-moz-range-thumb {
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    cursor:pointer;
+    border:solid 3px var(--text-color);
+    background-color: var(--accent-color);
+}
+
+.options{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    gap:2rem;
+    justify-content: center;
+}
+
+.optionsControls, .optionsColors, .optionsColorPallete{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+#optionsColorPallete{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;;
+}
+
+}
+
+i {
+    font-size: 50px;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+#colorDisplay{
+    background-color: white;
+    border-radius: 50%;
+    border: solid var(--text-color);
+}
+
+
     
+.footer
+{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size:medium;
+    
+}
+
+.footer a{
+    color: var(--accent-color);
+    font-size: xx-large;
 }

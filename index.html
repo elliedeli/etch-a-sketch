@@ -5,10 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script defer src="script.js"></script>
 </head>
 <body>
-    <button id="newGrid">New Grid?</button>
-    <div id="container"></div>
+    
+    <div class="sliderContainer"><button id="hideGrid">Hide Grid</button> 
+  <input id="sizeRange" type="range" min="1" max="100" step="1" value="50"><button id="newGrid">Custom Size</button> 
+    </div> <p> Grid Size: <output id="sizeDisplay"></output></p>
+    <div id="container" draggable="false" style="
+    width: 40vh; 
+    height: 40vh; 
+    "></div>
+    <div class="options">
+       
+        <div class="optionsControls">
+             <p><i class="fa-solid fa-paintbrush"></i></p>
+            <button id="clickButton">Draw on click</button>
+            <button id="hoverButton">Draw on hover</button>
+        </div>
+        <div class="optionsColors">
+            <p><i class="fa-solid fa-palette"></i></p>
+            <button id="rainbowButton">Rainbow Brush</button>
+            <button id="grayButton">Grayscale Brush</button>
+        </div>
+        <div id="optionsColorPallete">
+        </div>
+    </div>
+    
 </body>
 </html>
